@@ -1,0 +1,31 @@
+/* app css stylesheet */
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header */
+.top-header {
+  display: grid;
+}
+.left-header {
+  float: left;
+}
+.right-header {
+  float: right;
+}
+.app-title {
+  font-weight: bold;
+}
+
+/* Colors */
+.green {
+  color: #34a00f;
+}
+
+/* Main Area */
+.main-view {
+  position: relative;
+}
