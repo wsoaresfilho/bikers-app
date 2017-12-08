@@ -1,14 +1,31 @@
 /* app css stylesheet */
 
+body {
+  color: #363636;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #34a00f;
+}
+a:hover {
+  text-decoration: underline;
+}
+ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+}
 .container {
-  max-width: 960px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* Header */
 .top-header {
-  display: grid;
+  display: flex;
+  border-bottom: 2px solid #363636;
 }
 .left-header {
   float: left;
@@ -24,8 +41,84 @@
 .green {
   color: #34a00f;
 }
+.lightgray {
+  color: #d3d3d3;
+}
 
 /* Main Area */
-.main-view {
-  position: relative;
+
+/* Breadcrumbs */
+.navcrumbs {
+  display: flex;
+}
+.nav-arrows {
+  padding: 0 3px 0 12px;
+  font-size: 24px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-color: #f0f0f0;
+  border-top: 2px solid #dddddd;
+  padding: 50px 0;
+  color: #999999;
+  display: flex;
+  margin-bottom: 50px;
+}
+.jumbotron-item {
+  display: flex;
+  padding-right: 25px;
+  float: left;
+}
+.jumbotron-item-icon {
+  padding: 0 15px
+}
+.jumbotron-main-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #363636;
+}
+.jumbotron-item:last-child {
+  float: right;
+  padding: 0;
+}
+.jumbotron-item:last-child .jumbotron-item-icon,
+.jumbotron-item:last-child .jumbotron-main-title {
+  color: #34a00f;
+}
+
+/* Accordion */
+.accordion {
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.accordion-header {
+  background-color: #f0f0f0;
+  display: flex;  
+}
+.accordion-header h4 {
+  margin: 0;
+  padding: 15px;
+  flex-grow: 1;
+}
+.control {
+  padding: 15px;
+  margin: 0;
+}
+.accordion-body {
+  white-space: pre-wrap;
+  padding: 0 15px;
+  border-top: 2px solid #dddddd;
+  color: #999999;
+}
+.accordion-body i.fa {
+  float: left;
+  font-size: 120px;
+  padding-right: 15px;
+}
+
+/* Section User Registration */
+.user-registration {
+  padding-top: 30px;
 }
