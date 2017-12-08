@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.main', ['ngRoute'])
+angular.module('myApp.main', ['ngRoute', 'ngStorage'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
@@ -9,9 +9,12 @@ angular.module('myApp.main', ['ngRoute'])
   });
 }])
 
-.controller('MainCtrl', ['$scope', function($scope) {
+.controller('MainCtrl', ['$scope', '$localStorage', function($scope, $localStorage) {
 
   $scope.ViewActions = {};
+  $scope.$storage = $localStorage.$default({
+    teste: "teste"
+  });
 
   var topHeaderData = {
     appName: "Venturus Dummy App",
