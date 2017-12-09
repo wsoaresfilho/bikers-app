@@ -1,6 +1,6 @@
 # Bikers App
 
-This project is an [AngularJS][https://angularjs.org/] web app made for a job vacancy at Venturus.
+This project is an [AngularJS][angularjs] web app made for a job vacancy at Venturus.
 
 The project was made following the requirements given by the company.
 
@@ -37,9 +37,9 @@ To get started you can simply clone the `bikers-app` repository and install the 
 
 ### Prerequisites
 
-You need git to clone the `bikers-app` repository. You can get git from [here][https://git-scm.com/].
+You need git to clone the `bikers-app` repository. You can get git from [here][git].
 
-You must have Node.js and its package manager (npm) installed. You can get them from [here][https://nodejs.org/].
+You must have Node.js and its package manager (npm) installed. You can get them from [here][node].
 
 ### Clone `bikers-app`
 
@@ -72,4 +72,11 @@ The simplest way to start this server is:
 npm start
 ```
 
-Now browse to the app at [`localhost:8000`][localhost:8000].
+Now browse to the app at [`localhost:8000`][local-app-url].
+
+
+[angularjs]: https://angularjs.org/
+[git]: https://git-scm.com/
+[local-app-url]: http://localhost:8000/index.html
+[node]: https://nodejs.org/
+[npm]: https://www.npmjs.org/
