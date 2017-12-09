@@ -77,6 +77,6 @@ Now browse to the app at [`localhost:8000`][local-app-url].
 
 [angularjs]: https://angularjs.org/
 [git]: https://git-scm.com/
-[local-app-url]: http://localhost:8000/index.html
+[local-app-url]: http://localhost:8000/
 [node]: https://nodejs.org/
 [npm]: https://www.npmjs.org/
