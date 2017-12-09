@@ -7,4 +7,11 @@ angular.module('myApp.directives', [])
     templateUrl: '/view/top-header.html',
     controller: 'MainCtrl'
   };
+}])
+
+.directive('endFooter', [function() {
+  return {
+    templateUrl: '/view/end-footer.html',
+    controller: 'MainCtrl'
+  };
 }]);

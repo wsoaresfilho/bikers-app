@@ -4,10 +4,10 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.main',
-  'myApp.directives'
+  'myApp.directives',
+  'myApp.filters'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
+  $locationProvider.hashPrefix('');
   $routeProvider.otherwise({redirectTo: '/'});
 }]);

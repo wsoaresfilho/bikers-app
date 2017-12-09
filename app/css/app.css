@@ -1,5 +1,8 @@
 /* app css stylesheet */
 
+* {
+  box-sizing: border-box;
+}
 body {
   color: #363636;
   font-size: 16px;
@@ -15,11 +18,66 @@ ul {
   list-style-type: none;
   -webkit-padding-start: 0;
 }
+label {
+  display: inline-block;
+}
+button {
+  min-width: 90px;
+  min-height: 35px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 10px;
+  box-shadow: 2px 2px 5px -4px #3e3c3a;;
+}
+button[disabled],
+input[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+tbody th {
+  font-weight: normal;
+}
+:focus {
+  outline: none;
+}
+::selection {
+  background: none;
+}
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+/* Colors */
+.green {
+  color: #34a00f;
+}
+.lightgray {
+  color: #d3d3d3;
+}
+.lightergray {
+  color: #ddd;
+}
+.attention {
+  color: #FA787E;
+}
+
+/* Utilities */
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.sm-text {
+  font-size: smaller;
 }
 
 /* Header */
@@ -36,13 +94,18 @@ ul {
 .app-title {
   font-weight: bold;
 }
-
-/* Colors */
-.green {
-  color: #34a00f;
+.logo,
+.logout {
+  color: #363636;
 }
-.lightgray {
-  color: #d3d3d3;
+.logo:hover {
+  text-decoration: none;
+}
+.logo i {
+  margin-right: 10px;
+}
+.logout:hover {
+  color: #34a00f;
 }
 
 /* Main Area */
@@ -121,4 +184,143 @@ ul {
 /* Section User Registration */
 .user-registration {
   padding-top: 30px;
+}
+.form-area {
+  width: 100%;
+  margin-bottom: 20px;
+  min-height: 70px;
+}
+.form-area label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  position: relative;
+}
+.form-area input {
+  width: 100%;
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  padding: 5px 8px;
+  line-height: 1.6;
+  margin-bottom: 3px;
+}
+.help-text {
+  font-size: smaller;
+}
+.registration-form input.ng-invalid.ng-touched {
+  border-color: #FA787E;
+}
+.registration-form input.ng-valid:focus,
+.registration-form input:focus {
+  border-color: #34a00f;
+}
+.form-check-area label {
+  font-weight: normal;
+}
+.form-check-area label span {
+  padding: 0 18px 0 8px;
+  vertical-align: text-top;
+}
+.form-check-area label:first-child {
+  font-weight: bold;
+}
+input[type=radio],
+input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+.check {
+  display: block;
+  border-radius: 5px;
+  float: left;
+  border: 2px solid #AAAAAA;
+  height: 28px;
+  width: 28px;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+}
+.check::before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  height: 12px;
+  width: 12px;
+  top: 8px;
+  left: 8px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+input[type=radio]:checked ~ .check,
+input[type=checkbox]:checked ~ .check {
+  border: 2px solid #34a00f;
+}
+input[type=radio]:hover ~ .check,
+input[type=checkbox]:hover ~ .check {
+  border: 2px solid #34a00f;
+}
+input[type=radio]:checked ~ .check::before{
+  background: #333333;
+}
+input[type=radio] ~ .check {
+  border-radius: 100%;
+}
+input[type=checkbox]:checked ~ .check:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 12px;
+  background: #333333;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0px 0 #333333, 4px 0 0 #333333, 4px -2px 0 #333333, 4px -4px 0 #333333, 4px -6px 0 #333333, 4px -8px 0 #333333;
+  transform: rotate(45deg)
+}
+.form-button-area {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.save-btn {
+  background-color: #34a00f;
+  color: white;
+}
+
+.bikers {
+  margin-bottom: 30px;
+}
+.bikers-table {
+  text-align: left;
+}
+.bikers-table thead {
+  background-color: #34a00f;
+  color: white;
+  font-size: smaller;
+  box-shadow: 0px 2px 3px -1px black;
+}
+.bikers-table th,
+.bikers-table td {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+.bikers-table tbody {
+  font-size: 14px;
+}
+.bikers-table tbody tr {
+  cursor: pointer;
+}
+.bikers-table tbody tr:nth-of-type(even) {
+  background-color: #f4f4f4;
+}
+.bikers-table tbody tr:hover {
+  background-color: #c5dfbc;
+}
+.bikers-table tbody th:last-of-type:hover i {
+  color: #FA787E;
+}
+
+.footer {
+  border-top: 2px solid #363636;
+  min-height: 80px;
 }

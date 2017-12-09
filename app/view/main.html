@@ -37,7 +37,7 @@
   
 <main>
   <div class="container">
-    <div class="accordion">
+    <div class="accordion section group">
       <div class="accordion-header" ng-click="ViewActions.toggleAccordion()">
         <h4>{{ accordion.title }}</h4>
         <h5 ng-if="accordion.isOpen" class="control green">Close <i class="fa fa-long-arrow-up" aria-hidden="true"></i></h5>
@@ -51,6 +51,86 @@
 
     <section class="user-registration">
       <h1>User Registration</h1>
+      <div class="section group">
+        <form name="form" novalidate class="registration-form">
+          <div class="col span_5_of_12">
+            <div class="form-area">
+              <label for="fullname">Full name</label>
+              <input type="text" ng-focus="name.focus=true" ng-blur="name.focus=false" ng-model="user.fullname" name="fullname" required />
+              <div class="help-text">
+                <span class="lightergray" ng-show="name.focus">Tell us your name.</span>
+              </div>
+            </div>            
+            <div class="form-area">
+              <label for="email">E-mail</label>
+              <input type="email" ng-focus="email.focus=true" ng-blur="email.focus=false" ng-model="user.email" name="email" required />
+              <div class="help-text">
+                <span class="lightergray" ng-show="email.focus">Tell us your email.</span>
+              </div>
+            </div>
+            <div class="form-area">
+                <label for="city">City</label><span class="lightergray right sm-text">optional</span>
+                <input type="text" ng-focus="city.focus=true" ng-blur="city.focus=false" ng-model="user.city" name="city" />
+                <div class="help-text">
+                  <span class="lightergray" ng-show="city.focus">Tell us your city.</span>
+                </div>
+              </div>           
+          </div>
+          <div class="col span_1_of_12"></div>
+          <div class="col span_6_of_12">                        
+            <div class="form-area form-check-area">
+              <label>Ride in group?</label><br/>
+              <label ng-repeat="ride in rideOptions">
+                <input type="radio" ng-model="user.ride" value="{{ride}}" required/>
+                <div class="check"></div>
+                <span>{{ride}}</span>
+              </label>
+              <br />
+            </div>
+            <div class="form-area form-check-area">
+              <label>Days of the week</label><br/>
+              <label ng-repeat="day in days">
+                <input type="checkbox" ng-model="user.days[day]" ngTrueValue="true" ngFalseValue="false"/>
+                <div class="check"></div>
+                <span>{{day}}</span>
+              </label>
+            </div>
+            <div class="form-area form-button-area">
+              <button type="button" ng-click="ViewActions.cancel(form)">Cancel</button>
+              <button class="save-btn" type="submit" ng-click="ViewActions.save(user, form)" ng-disabled="form.$invalid">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="bikers">
+      <h1>Bikers</h1>
+      <div class="section group">
+        <table class="bikers-table">
+          <thead>
+            <tr>
+              <th>Full name</th>
+              <th>E-mail</th>
+              <th>City</th>
+              <th>Ride in group</th>
+              <th>Days of the week</th>
+              <th>Registration day</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="biker in bikers" ng-click="ViewActions.edit(biker)">
+              <th>{{biker.fullname}}</th>
+              <th>{{biker.email}}</th>
+              <th>{{biker.city}}</th>
+              <th>{{biker.ride}}</th>
+              <th>{{biker.days | daysOfWeek}}</th>
+              <th>{{biker.regdate | date:'MM/dd/yyyy'}} <span class="lightgray">{{biker.regdate | date:'hh:mma'}}</span></th>
+              <th ng-click="ViewActions.delete($index)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </div>
 </main>
