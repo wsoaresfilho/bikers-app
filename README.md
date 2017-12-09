@@ -1,6 +1,6 @@
 # Bikers App
 
-This project is an [AngularJS][angularjs] web app made for a job vacancy at Venturus.
+This project is an [AngularJS][https://angularjs.org/] web app made for a job vacancy at Venturus.
 
 The project was made following the requirements given by the company.
 
@@ -22,7 +22,7 @@ Consider sending all source codes so we can evaluate your development process.
 
 ## Application flow
 
-Your application must have the following flow:
+The application must have the following flow:
 * Help message must be closed by default, when user clicks on the link the content should be opened as an
 accordion
 * User Registration and Bikers are always visible - On the user registration form, your application should add the new biker in question on the table below it,
@@ -33,13 +33,13 @@ following all data as presented on the UI
 
 ## Getting Started
 
-To get you started you can simply clone the `bikers-app` repository and install the dependencies:
+To get started you can simply clone the `bikers-app` repository and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the `bikers-app` repository. You can get git from [here][git].
+You need git to clone the `bikers-app` repository. You can get git from [here][https://git-scm.com/].
 
-You must have Node.js and its package manager (npm) installed. You can get them from [here][node].
+You must have Node.js and its package manager (npm) installed. You can get them from [here][https://nodejs.org/].
 
 ### Clone `bikers-app`
 
@@ -72,4 +72,4 @@ The simplest way to start this server is:
 npm start
 ```
 
-Now browse to the app at [`localhost:8000`][local-app-url].
+Now browse to the app at [`localhost:8000`][localhost:8000].
