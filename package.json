@@ -1,6 +1,6 @@
 {
   "name": "bikers-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A little project for a job at Venturus",
   "repository": "https://github.com/wsoaresfilho/bikers-app",
   "devDependencies": {

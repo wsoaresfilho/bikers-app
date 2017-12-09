@@ -27,7 +27,10 @@ button {
   border-radius: 5px;
   border: none;
   margin-left: 10px;
-  box-shadow: 2px 2px 5px -4px #3e3c3a;;
+  box-shadow: 2px 2px 5px -4px #3e3c3a;
+}
+button:hover {
+  box-shadow: 3px 3px 6px -3px #3e3c3a;
 }
 button[disabled],
 input[disabled] {
@@ -158,7 +161,11 @@ tbody th {
 }
 .accordion-header {
   background-color: #f0f0f0;
-  display: flex;  
+  display: flex;
+  cursor: pointer;
+}
+.accordion-header:hover {
+  background-color: #dbe9db;
 }
 .accordion-header h4 {
   margin: 0;
@@ -274,7 +281,12 @@ input[type=checkbox]:checked ~ .check:after {
   background: #333333;
   width: 2px;
   height: 2px;
-  box-shadow: 2px 0px 0 #333333, 4px 0 0 #333333, 4px -2px 0 #333333, 4px -4px 0 #333333, 4px -6px 0 #333333, 4px -8px 0 #333333;
+  box-shadow: 2px 0px 0 #333333, 
+              4px 0 0 #333333, 
+              4px -2px 0 #333333, 
+              4px -4px 0 #333333, 
+              4px -6px 0 #333333, 
+              4px -8px 0 #333333;
   transform: rotate(45deg)
 }
 .form-button-area {
